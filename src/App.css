@@ -1,38 +1,415 @@
-.App {
+body {
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("img/space1-hero.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', 'sans-serif';
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  min-width: .25rem;
+  max-width: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px rgba(33, 37, 41, 0.8);
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #212529;
+}
+
+.nav-icons {
+  position: relative;
+  display: inline !important;
+  top: 4px;
+  background: rgb(255, 85, 85);
+  background: -moz-linear-gradient(241deg, rgba(255, 85, 85, 1) 11%, rgba(199, 85, 255, 1) 34%, rgba(113, 115, 255, 1) 54%, rgba(199, 85, 255, 1) 72%, rgba(255, 85, 85, 1) 89%);
+  background: -webkit-linear-gradient(241deg, rgba(255, 85, 85, 1) 11%, rgba(199, 85, 255, 1) 34%, rgba(113, 115, 255, 1) 54%, rgba(199, 85, 255, 1) 72%, rgba(255, 85, 85, 1) 89%);
+  background: linear-gradient(241deg, rgba(255, 85, 85, 1) 11%, rgba(199, 85, 255, 1) 34%, rgba(113, 115, 255, 1) 54%, rgba(199, 85, 255, 1) 72%, rgba(255, 85, 85, 1) 89%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#ff5555", endColorstr="#ff5555", GradientType=1);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 5s linear infinite;
+  display: inline-block;
+  font-size: clamp(20px, 30px, 40px) !important;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.nav-link {
+  position: relative;
+  bottom: 4px;
+  transition: transform 400ms;
+}
+
+.nav-link:hover {
+  transform: translateY(-5%);
+  transition: transform 200ms;
+}
+
+#hero-section {
+  min-height: 800px;
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgb(0, 0, 0);
+  border: 2px 0px 2px 0px solid rgba(0, 0, 0, 0.4);
+  height: 100vh;
+}
+
+.hero-img {
+  width: clamp(150px, 50vw, 350px);
+  box-shadow: 9px 9px 30px 10px rgba(0, 0, 0, 0.72);
+  margin-top: 25vh;
+  border-radius: 50%;
+  margin-bottom: 5%;
+}
+
+.head-font1 {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.head-font2 {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.hero-element {
+  font-size: clamp(40px, 4vw, 6vw);
+  font-family: 'Poppins';
+  color: white;
+  transition-duration: 0.5s;
+}
+
+.hero-element:hover {
+  transition-duration: 0.5s;
+  transform: translateY(4px);
+  color: #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+/* Mission */
+
+#mission-section h2 {
+  padding-top: 1%;
+  padding-bottom: 3%;
+}
+
+#mission-section .container {
+  display: block;
+  object-fit: contain;
+  padding-bottom: 10%;
+}
+
+#mission-section .container .card .col-md-6 {
+  display: block;
+  object-fit: contain;
+  margin-bottom: 90px;
+}
+
+#mission-section {
+  margin-top: 8rem;
+  background-color: rgb(34, 0, 73);
+  border: 10px solid;
+  border-image-source: linear-gradient(236deg, #ff0000 0%, #ff0056 35%, #2c00ff 100%);
+  border-image-slice: 100;
+  border-width: 10px;
+  color: white;
+  box-shadow: 4px 4px 14px #000;
+}
+
+#mission-section .card {
+  background-color: rgba(50, 0, 0, 0.5);
+  height: 20vh;
+}
+
+#mission-section h4 {
+  color: white;
+  text-shadow: 3px 3px 5px rgb(80, 0, 0);
+  padding-top: 10%;
+  font-family: Poppins;
+}
+
+/* SIZZLE Start */
+
+.mission-img1 {
+  background: no-repeat center url("mission/quantum.png"),
+    linear-gradient(90deg, rgba(253, 29, 29, 1) 25%, rgba(106, 0, 255, 1) 100%);
+  background-size: contain;
+  min-height: 10vh;
+  background-position-x: right;
+  margin-bottom: -5px;
+}
+
+.mission-img2 {
+  background: no-repeat center url("mission/brain-ai.png"),
+    linear-gradient(90deg, rgba(253, 29, 29, 1) 25%, rgba(106, 0, 255, 1) 100%);
+  background-size: contain;
+  min-height: 10vh;
+  background-position-x: right;
+}
+
+.mission-img3 {
+  background: no-repeat center url("mission/web-dev.png"),
+    linear-gradient(90deg, rgba(253, 29, 29, 1) 25%, rgba(106, 0, 255, 1) 100%);
+  background-size: contain;
+  min-height: 10vh;
+  background-position-x: right;
+}
+
+.mission-img4 {
+  background: no-repeat center url("mission/vr.png"),
+    linear-gradient(90deg, rgba(253, 29, 29, 1) 25%, rgba(106, 0, 255, 1) 100%);
+  background-size: contain;
+  min-height: 10vh;
+  background-position-x: right;
+}
+
+/* ###################################### Skills ############################################ */
+
+#skills-section {
+  background-color: rgb(34, 0, 73);
+  border: 10px solid;
+  border-image-source: linear-gradient(to left, #2b9577, #5673c7);
+  border-image-slice: 100;
+  border-width: 10px;
+  margin-top: 8rem;
+  padding-bottom: 10%;
+  box-shadow: 4px 4px 14px #000;
+}
+
+.skills-img {
+  text-align: center;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.skills-txt {
+  text-align: center;
+  font-size: clamp(20px, 1vw, 2vw);
+  text-shadow: -54px 0px 44px 6px rgba(123, 0, 157, 0.41);
+}
+
+.skills-container .card-header {
+  background: rgb(34, 0, 73) no-repeat;
+}
+
+.skills-container .card {
+  background-color: rgba(50, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+  height: auto;
+}
+
+#skills-section h2 {
+  padding-top: 3%;
+}
+
+/* #################################### Inspiration ######################################### */
+
+.carousel-item {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.carousel-item img {
+  border: 5px solid;
+  border-image-source: linear-gradient(237deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-image-slice: 1;
+  border-width: 4px;
+  image-rendering: auto;
+  width: auto;
+  max-height: 70vh;
+  max-width: 75vw;
+  object-fit: cover;
+  margin: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.carousel-caption {
+  font-size: 20px;
+  color: beige;
+  text-shadow: 1px 2px 1px rgb(0, 0, 0);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#inspiration-carousel {
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.App-link {
-  color: #61dafb;
+#inspiration-section {
+  background-color: rgb(34, 0, 73);
+  border: 10px solid;
+  border-image-source: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border-image-slice: 100;
+  border-width: 10px;
+  margin-top: 8rem;
+  padding-bottom: 0%;
+  box-shadow: 4px 4px 14px #000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.carousel-btn {
+  font-size: 5vh;
+}
+
+.bottomright {
+  /* SIZZLE */
+  position: absolute;
+  bottom: -6px;
+  right: 5%;
+  z-index: 1;
+  background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border: 0;
+  background: -webkit-linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+}
+
+.bottomleft {
+  /* SIZZLE */
+  position: absolute;
+  bottom: -6px;
+  left: 5%;
+  z-index: 1;
+  background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  border: 0;
+  background: -webkit-linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+}
+
+
+/* ###################################### Contact ########################################### */
+
+#contact-section {
+  background-color: rgb(34, 0, 73);
+  border: 10px solid;
+  border-image-source: linear-gradient(225deg, #FF0056 4%, #9e00ff 35%, #FFE32C 93%);
+  border-image-slice: 100;
+  border-width: 10px;
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+  padding-bottom: 6%;
+  box-shadow: 4px 4px 14px #000;
+}
+
+.cont-icons1 {
+  background: linear-gradient(45deg, #FF0056 2%, #9e00ff 35%, #FFE32C 93%), #743ad5;
+  border: 0;
+  background: -webkit-linear-gradient(45deg, #FF0056 2%, #9e00ff 35%, #FFE32C 93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  font-size: clamp(10vw, 80px, 20vw) !important;
+  transition-duration: .5s;
+}
+
+.cont-icons2 {
+  background: linear-gradient(142deg, #FF0056 2%, #9e00ff 35%, #FFE32C 93%), #743ad5;
+  border: 0;
+  background: -webkit-linear-gradient(142deg, #FF0056 2%, #9e00ff 35%, #FFE32C 93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  font-size: clamp(10vw, 80px, 20vw) !important;
+  transition-duration: .5s;
+}
+
+.cont-icons3 {
+  background: linear-gradient(300deg, #FF0056 2%, #9e00ff 35%, #FFE32C 93%), #743ad5;
+  border: 0;
+  background: -webkit-linear-gradient(300deg, #FF0056 2%, #9e00ff 35%, #FFE32C 93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.3);
+  z-index: 2;
+  font-size: clamp(10vw, 80px, 20vw) !important;
+  transition-duration: .5s;
+}
+
+.cont-icons1:hover {
+  background-size: 200% auto;
+  animation: textclip 1s alternate 2;
+  animation-delay: -1s;
+}
+
+.cont-icons2:hover {
+  background-size: 200% auto;
+  animation: textclip 1s alternate 2;
+  animation-delay: -1s;
+}
+
+.cont-icons3:hover {
+  background-size: 200% auto;
+  animation: textclip 1s alternate 2;
+  animation-delay: -1s;
+}
+
+
+/* ###################################### Footer ############################################ */
+
+#footer-section {
+  margin-top: 10%;
+}
+
+/* ###################################### Resume ############################################ */
+
+iframe {
+  height: 100%;
+  width: 75%;
+  object-fit: contain;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  -moz-border-radius: 12px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  box-shadow: 4px 4px 14px #000;
+  overflow-y: hidden;
+}
+
+.offcanvas {
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  width: 50%;
+  overflow-y: hidden;
+}
+
+.offcanvas-header {
+  margin-bottom: -3%;
+}
+
+.offcanvas-header h3 {
+  align-content: center !important;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+  min-width: .25rem;
+  max-width: .5rem;
+}
+
+.offcanvas-body::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 10px #212529;
+}
+
+.offcanvas-body::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #a04ebb 0%, #C850C0 46%, #F7bb7a 100%);
 }
